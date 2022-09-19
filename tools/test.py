@@ -125,7 +125,7 @@ parser.add_argument('--dataset', default='UAVTrack112',type=str,
 parser.add_argument('--config', default='../experiments/config.yaml', type=str,
             help='config file')
 
-parser.add_argument('--snapshot', default='../snapshot/t_best.pth', type=str,
+parser.add_argument('--snapshot', default='./snapshot/t_best.pth', type=str,
             help='snapshot of models to eval')
 parser.add_argument('--update_path', default='./models/vot2018.pth.tar', type=str,
             help='eval one special video')
