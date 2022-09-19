@@ -38,6 +38,7 @@ The testing result will be saved in the `results/dataset_name/tracker_name` dire
 #### Prepare training datasets
 
 Download the datasets：
+* [Vimeo-90K](http://toflow.csail.mit.edu/)
 * [VID](http://image-net.org/challenges/LSVRC/2017/)
 * [COCO](http://cocodataset.org)
 * [GOT-10K](http://got-10k.aitestunion.com/downloads)
@@ -47,6 +48,11 @@ Download the datasets：
 
 
 #### Train a model
+To train the ClimNet model, run `main.py` with the desired configs:
+```bash
+python main.py --batch_size 32 --test_batch_size 32 --dataset vimeo90K_septuplet --loss 1*L1 --max_epoch 100 --lr 0.002 --data_root /train_dataset/vimeo_triplet --n_outputs 1 
+
+```
 To train the ClimRT model, run `train.py` with the desired configs:
 
 ```bash
