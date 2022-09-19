@@ -6,7 +6,7 @@
 ## Abstract
 Object tracking is crucial for the autonomous navigation of unmanned aerial vehicles (UAVs) and has broad application in robotic automation fields. However, reliable aerial tracking remains a challenging task due to various difficulties like frequent occlusion and aspect ratio change. Additionally, most of the existing work mainly focus on explicit information to improve tracking performance, ignoring potential connections between frames. To solve the above issues, this work proposes a novel framework with continuity-aware latent interframe information mining for reliable UAV tracking, i.e., ClimRT. Specifically, a new efficient continuity-aware latent interframe information mining network (ClimNet) is proposed for UAV tracking, which can generate highly-effective latent frames between two adjacent frames. Besides, a novel location-continuity Transformer (LCT) is designed to fully explore continuity-aware spatial-temporal information, thereby markedly enhancing UAV tracking. Extensive qualitative and quantitative experiments on three authoritative aerial benchmarks have strongly validated the robustness and reliability of ClimRT in UAV Tracking. Furthermore, real-world tests on the typical aerial platform have proven its practicability and effectiveness.
 
-![Workflow of our tracker](https://github.com/vision4robotics/ClimRT/blob/main/imgs/img1.jpg)
+![Workflow of our tracker](https://github.com/cvmutian/ClimRT/blob/main/imgs/img1.png)
 
 This figure shows the workflow of our tracker.
 
