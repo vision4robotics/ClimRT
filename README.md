@@ -22,7 +22,7 @@ pip install -r requirement.txt
 
 ### 2. Test
 Download pretrained model for ClimNet: [model_best](https://pan.baidu.com/s/1QeU7OcTqHksZXscBq3skiw)(code: c99t) and put it into `./pretrained_models` directory.
-Download pretrained model: [t_best](https://pan.baidu.com/s/1QeU7OcTqHksZXscBq3skiw)(code: c99t) and put it into `tools/snapshot` directory.
+Download pretrained model for ClimRT: [t_best](https://pan.baidu.com/s/1QeU7OcTqHksZXscBq3skiw)(code: c99t) and put it into `tools/snapshot` directory.
 
 Download testing datasets and put them into `Dataset` directory. If you want to test the tracker on a new dataset, please refer to [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit) to set test_dataset.
 
