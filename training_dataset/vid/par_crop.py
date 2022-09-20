@@ -41,7 +41,7 @@ def crop_hwc(image, bbox, out_sz, padding=(0, 0, 0)):
     c = -a * bbox[0]
     d = -b * bbox[1]
     mapping = np.array([[a, 0, c],
-                        [0, b, d]]).astype(np.float)
+                        [0, b, d]]).astype(np.float) #t
     crop = cv2.warpAffine(image, mapping, (out_sz, out_sz), borderMode=cv2.BORDER_CONSTANT, borderValue=padding)
     return crop
 
