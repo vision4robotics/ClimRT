@@ -11,7 +11,7 @@ __C = CN()
 
 cfg = __C
 
-__C.META_ARC = "HiFT_alexnet"
+__C.META_ARC = "ClimRT_alexnet"
 
 __C.CUDA = True
 
@@ -226,7 +226,7 @@ __C.ANCHOR.STRIDE = 16
 # ------------------------------------------------------------------------ #
 __C.TRACK = CN()
 
-__C.TRACK.TYPE = 'HiFTtracker'
+__C.TRACK.TYPE = 'ClimRTtracker'
 
 # Scale penalty
 __C.TRACK.PENALTY_K = 0.04
