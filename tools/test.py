@@ -11,7 +11,7 @@ import torch
 import numpy as np
 from pysot.core.config import cfg
 from pysot.models.model_builder import ModelBuilder
-from pysot.tracker.hift_tracker import HiFTTracker
+from pysot.tracker.ClimRT_tracker import ClimRTTracker
 from pysot.utils.bbox import get_axis_aligned_bbox
 from pysot.utils.model_load import load_pretrain
 from toolkit.datasets import DatasetFactory
