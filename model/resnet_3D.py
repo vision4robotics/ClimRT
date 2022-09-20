@@ -1,6 +1,5 @@
 # Modified from https://github.com/pytorch/vision/tree/master/torchvision/models/video
 
-#from model.FLAVR_arch import MSfusion
 import torch
 import torch.nn as nn
 import math
