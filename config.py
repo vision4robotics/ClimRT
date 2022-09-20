@@ -21,8 +21,7 @@ model_arg.add_argument('--nbr_frame' , type=int , default=2)
 model_arg.add_argument('--nbr_width' , type=int , default=1)
 model_arg.add_argument('--joinType' , choices=["concat" , "add" , "none"], default="concat")
 model_arg.add_argument('--upmode' , choices=["transpose","upsample"], type=str, default="transpose")
-model_arg.add_argument('n_outputs' , type=int, default=1,
-                        help="For Kx FLAVR, use n_outputs k-1")
+model_arg.add_argument('n_outputs' , type=int, default=1)
 
 # Training / test parameters
 learn_arg = add_argument_group('Learning')
