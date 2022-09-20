@@ -71,12 +71,12 @@ if input_video.startswith("http"):
 
 def loadModel(model, checkpoint):
     
-    saved_state_dict = torch.load(checkpoint)['state_dict']#参数可训练的层
+    saved_state_dict = torch.load(checkpoint)['state_dict']
     saved_state_dict = {k.partition("module.")[-1]:v for k,v in saved_state_dict.items()}
     model.load_state_dict(saved_state_dict)
 
 checkpoint = args.load_model
-from model.FLAVR_arch import UNet_3D_3D
+from model.ClimNet_arch import UNet_3D_3D
 
 model = UNet_3D_3D(model_name.lower() , n_inputs=2, n_outputs=n_outputs,  joinType=joinType)
 loadModel(model , checkpoint)
@@ -93,7 +93,7 @@ def write_video_cv2(frames , video_name , fps , sizes):
 def make_image(img):
     q_im = img.data.mul(255.).clamp(0,255).round()
     im = q_im.permute(1, 2, 0).cpu().numpy().astype(np.uint8)
-    im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)#从tensor 变为 图片
+    im = cv2.cvtColor(im, cv2.COLOR_RGB2BGR)
     return im
 
 def files_to_videoTensor(path , downscale=1.):
