@@ -10,6 +10,11 @@ Object tracking is crucial for the autonomous navigation of unmanned aerial vehi
 
 This figure shows the workflow of our tracker.
 
+## Demo
+
+- 📹 Demo of real-world ClimRT tests.
+- Refer to [ClimRT-RWT](https://www.bilibili.com/video/BV19e4y187Km/?vd_source=4bf245fe6a4c3e4931ad481b87f324ae) on Bilibili for the demo.
+
 ## About Code
 ### 1. Environment setup
 The ClimNet has been tested on Ubuntu 18.04, Python 3.7.4, numpy==1.19.2 , Pytorch 1.5.0, torchvision==0.6.0, cudatoolkit==10.1.
