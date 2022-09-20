@@ -29,7 +29,7 @@ class UVADTVideo(Video):
 def loaddata():
         
     
-    path='/home/tj-v4r/Dataset/VisDrone2018-SOT-test/'
+    path='../../Dataset/VisDrone2018-SOT-test/'
     
     name_list=os.listdir(path+'/sequences')
     name_list.sort()
@@ -43,7 +43,7 @@ def loaddata():
         imgs=path+'/sequences/'+str(name_list[jj])
         txt=path+'/annotations/'+str(name_list[jj])+'.txt'
         bbox=[]
-        f = open(txt)               # 返回一个文件对象
+        f = open(txt)               
         file= f.readlines()
         li=os.listdir(imgs)
         li.sort()
