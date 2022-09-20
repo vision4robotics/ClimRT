@@ -8,9 +8,9 @@ from pysot.core.config import cfg
 from pysot.tracker.base_tracker import SiameseTracker
 import cv2
 
-class HiFTTracker(SiameseTracker):
+class ClimRTTracker(SiameseTracker):
     def __init__(self, model):
-        super(HiFTTracker, self).__init__()
+        super(ClimRTTracker, self).__init__()
 
         self.score_size=cfg.TRAIN.OUTPUT_SIZE
         self.anchor_num=1
