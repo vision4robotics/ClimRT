@@ -21,8 +21,9 @@ pip install -r requirement.txt
 ```
 
 ### 2. Test
-Download pretrained model for ClimNet: [model_best](https://pan.baidu.com/s/1QeU7OcTqHksZXscBq3skiw)(code: c99t) and put it into `./pretrained_models` directory.
-Download pretrained model for ClimRT: [t_best](https://pan.baidu.com/s/1QeU7OcTqHksZXscBq3skiw)(code: c99t) and put it into `tools/snapshot` directory.
+Download pretrained model for backbone: [alexnet-bn.pth](https://pan.baidu.com/s/1IBbepyroDz1fVmW6cxSd2A)(code: 2lr3) and put it into `./pretrained_models` directory.
+Download pretrained model for ClimNet: [model_best.pth](https://pan.baidu.com/s/1bjyeT_JwS76MrZFcXM50uw)(code: mc8c) and put it into `./pretrained_models` directory.
+Download pretrained model for ClimRT: [t_best.pth](https://pan.baidu.com/s/1Dy0ff1GtWLlZQJ_eKvzs9g)(code: lswe) and put it into `tools/snapshot` directory.
 
 Download testing datasets and put them into `Dataset` directory. If you want to test the tracker on a new dataset, please refer to [pysot-toolkit](https://github.com/StrangerZhang/pysot-toolkit) to set test_dataset.
 
@@ -61,7 +62,7 @@ python train.py
 ```
 
 ### 4. Evaluation
-We provide the tracking [results](https://pan.baidu.com/s/1RVSiq7XUJCQnyXtoRq9SYg) (code: tj12) of UAV123@10fps, UAV123 and UAVTrack112. If you want to evaluate the tracker, please put those results into  `results` directory.
+We provide the tracking [results](https://pan.baidu.com/s/1wj22fFjlB2VNkXAvVLXCig) (code: 296s) of UAV123@10fps, UAV123 and UAVTrack112. If you want to evaluate the tracker, please put those results into  `results` directory.
 ```
 python eval.py 	                          \
 	--tracker_path ./results          \ # result path
