@@ -81,7 +81,7 @@ def ca():
     
 
     
-    path='/home/tj-v4r/Dataset/DTB70'
+    path='../../Dataset/DTB70'
     txt='groundtruth_rect.txt'
     name_list=os.listdir(path)
     name_list.sort()
@@ -95,7 +95,7 @@ def ca():
         imgs=path+'/'+str(name_list[jj])+'/img'
         txt=path+'/'+str(name_list[jj])+'/groundtruth_rect.txt'
         bbox=[]
-        f = open(txt)               # 返回一个文件对象
+        f = open(txt)               
         file= f.readlines()
         li=os.listdir(imgs)
         li.sort()
