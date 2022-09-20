@@ -28,7 +28,7 @@ def main(i):
      model = load_pretrain(model, args.snapshot).cuda().eval()
 
     # build tracker
-     tracker = HiFTTracker(model)
+     tracker = ClimRTTracker(model)
      
 
      for iname in [
