@@ -11,14 +11,14 @@ from pysot.core.config import cfg
 from pysot.models.loss import select_cross_entropy_loss,IOULoss
 from pysot.models.backbone.newalexnet import AlexNet
 from pysot.models.utile.utile import HiFT
-from model.FLAVR_arch import UNet_3D_3D
+from model.ClimNet_arch import UNet_3D_3D
 from torchvision.transforms.functional import crop as cc
 from torchvision import transforms
 import numpy as np
 
 def loadModel(model, checkpoint):
     
-    saved_state_dict = t.load(checkpoint)['state_dict']#参数可训练的层
+    saved_state_dict = t.load(checkpoint)['state_dict']
     saved_state_dict = {k.partition("module.")[-1]:v for k,v in saved_state_dict.items()}
     model.load_state_dict(saved_state_dict)
 
@@ -33,7 +33,7 @@ joinType = "concat"
 
 
 
-class ModelBuilder(nn.Module):#在bb中存储上一帧search并引入到这里即可（lx）
+class ModelBuilder(nn.Module):
     def __init__(self):
         super(ModelBuilder, self).__init__()
 
