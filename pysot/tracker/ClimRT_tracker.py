@@ -18,7 +18,7 @@ class ClimRTTracker(SiameseTracker):
         window = np.outer(hanning, hanning)
         self.window = np.tile(window.flatten(), self.anchor_num)
         self.model = model
-        self.model.eval() #t
+        self.model.eval() 
 
     def generate_anchor(self,mapp):  
         def dcon(x):
