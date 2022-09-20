@@ -13,7 +13,7 @@ This figure shows the workflow of our tracker.
 ## Demo
 
 - 📹 Demo of real-world ClimRT tests.
-- Refer to [ClimRT-RWT](https://www.bilibili.com/video/BV19e4y187Km/?vd_source=4bf245fe6a4c3e4931ad481b87f324ae) on Bilibili for the demo.
+- Refer to [ClimRT-RWT](https://www.bilibili.com/video/BV1Zt4y1A7kM/?spm_id_from=333.999.0.0&vd_source=447ba056ce40ee76e5272b9f5c71a781) on Bilibili for the demo.
 
 ## About Code
 ### 1. Environment setup
