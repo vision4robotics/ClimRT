@@ -5,10 +5,10 @@ import math
 from pysot.models.utile.tran import Transformer
 
     
-class HiFT(nn.Module):
+class ClimRT(nn.Module):
     
     def __init__(self,cfg):
-        super(HiFT, self).__init__()
+        super(ClimRT, self).__init__()
 
 
         self.conv1 = nn.Sequential(
