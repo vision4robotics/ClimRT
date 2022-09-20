@@ -12,7 +12,7 @@ from .video import Video
 
 def loaddata():
     
-    path='/home/tj-v4r/Dataset/UAV123_20L'
+    path='../../Dataset/UAV123_20L'
     
     name_list=os.listdir(path+'/data_seq')
     name_list.sort()
@@ -26,7 +26,7 @@ def loaddata():
         imgs=path+'/data_seq/'+str(name_list[jj])
         txt=path+'/anno/'+str(name_list[jj])+'.txt'
         bbox=[]
-        f = open(txt)               # 返回一个文件对象
+        f = open(txt)               
         file= f.readlines()
         li=os.listdir(imgs)
         li.sort()
