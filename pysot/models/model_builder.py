@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from pysot.core.config import cfg
 from pysot.models.loss import select_cross_entropy_loss,IOULoss
 from pysot.models.backbone.newalexnet import AlexNet
-from pysot.models.utile.utile import HiFT
+from pysot.models.utile.utile import ClimRT
 from model.ClimNet_arch import UNet_3D_3D
 from torchvision.transforms.functional import crop as cc
 from torchvision import transforms
@@ -42,7 +42,7 @@ class ModelBuilder(nn.Module):
         self.internet = UNet_3D_3D(model_name.lower() , n_inputs=2, n_outputs=n_outputs,  joinType='concat')
         loadModel(self.internet , checkpoint)
         self.internet = self.internet.cuda()
-        self.grader=HiFT(cfg).cuda()
+        self.grader=ClimRT(cfg).cuda()
         self.cls2loss=nn.BCEWithLogitsLoss()
         self.IOULoss=IOULoss() 
         self.zerop = nn.ZeroPad2d(padding=(0,1,0,1))#left,right,up,down  
