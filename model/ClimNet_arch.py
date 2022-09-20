@@ -187,7 +187,7 @@ class UNet_3D_3D(nn.Module):
 
         ## Batch mean normalization works slightly better than global mean normalization, thanks to https://github.com/myungsub/CAIN
         mean_ = images.mean(2, keepdim=True).mean(3, keepdim=True).mean(4,keepdim=True)
-        images = images-mean_ #意义？
+        images = images-mean_ 
 
         x_0 , x_1 , x_2 , x_3 , x_4 = self.encoder(images)
 
@@ -204,13 +204,13 @@ class UNet_3D_3D(nn.Module):
         dx_0 = joinTensors(dx_0 , x_1 , type=self.joinType)
 
         dx_out = self.lrelu(self.decoder[4](dx_0))
-        dx_out = torch.cat(torch.unbind(dx_out , 2) , 1)#切除n*c*t*w*h中t后按c连接
+        dx_out = torch.cat(torch.unbind(dx_out , 2) , 1)
 
         out = self.lrelu(self.feature_fuse(dx_out))
         out = self.outconv(out)
 
-        out = torch.split(out, dim=1, split_size_or_sections=3)##3channel一张图，RGB
-        mean_ = mean_.squeeze(2)##去掉维度2，即变为ncwh
+        out = torch.split(out, dim=1, split_size_or_sections=3)
+        mean_ = mean_.squeeze(2)
         out = [o+mean_ for o in out]
         return out
 
