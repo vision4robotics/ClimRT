@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Single Object Tracking Evaluation')
     parser.add_argument('--dataset_dir', default='',type=str, help='dataset root directory')
-    parser.add_argument('--dataset', default='UAVTrack112',type=str, help='dataset name')
+    parser.add_argument('--dataset', default='UAV123',type=str, help='dataset name')
     parser.add_argument('--tracker_path', '-p', default='', type=str,
                     help='tracker result path')
     parser.add_argument('--trackers',default='general_model', nargs='+')
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     
 
 
-    root = '../Dataset/UAVTrack112/data_seq'
+    root = '../Dataset/UAV123/data_seq'
     root = os.path.join(root)
     root = os.path.join(root)
     trackers = args.trackers
